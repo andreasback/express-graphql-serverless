@@ -1,0 +1,12 @@
+{
+  "name": "express-graphql-serverless",
+  "author": "Andreas Back",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.11.0",
+    "aws-serverless-express": "^3.0.2"
+  }
+}

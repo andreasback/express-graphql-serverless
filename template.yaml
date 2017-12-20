@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: A Simple GraphQL Endpoint using express-graphql
+Resources:
+  GraphQLEndpoint:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: ExpressGraphQLEndpoint
+      Handler: index.handler
+      Runtime: nodejs6.10
+      CodeUri: ./
+      Description: A Simple GraphQL Endpoint using express-graphql
+      MemorySize: 256
+      Timeout: 5
+      Policies:
+        - AWSLambdaExecute
+      Events:
+        GraphQL:
+          Type: Api
+          Properties:
+            Path:  /graphql
+            Method: any
